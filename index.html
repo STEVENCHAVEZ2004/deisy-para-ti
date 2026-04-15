@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para la Más Hermosa</title>
+
+<style>
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+}
+
+/* --- FONDO --- */
+.fondo-imagen {
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), 
+    url('https://images.unsplash.com/photo-1518199266791-c399a9560528?q=80&w=1920&auto=format&fit=crop');
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+/* --- CONTENEDOR --- */
+.contenedor {
+    background: rgba(255,255,255,0.15);
+    padding: 40px;
+    border-radius: 20px;
+    backdrop-filter: blur(8px);
+    max-width: 80%;
+}
+
+/* --- TITULO --- */
+h1 {
+    font-size: 3.5em;
+    animation: latido 2s infinite;
+}
+
+@keyframes latido {
+    0% {transform: scale(1);}
+    50% {transform: scale(1.05);}
+    100% {transform: scale(1);}
+}
+
+.subtitulo {
+    color: #ffdede;
+}
+
+/* --- FOTO --- */
+.marco-foto {
+    position: relative;
+    display: inline-block;
+    padding: 15px;
+    border-radius: 50%;
+}
+
+/* brillo */
+.marco-foto::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,105,180,0.7), transparent 70%);
+    filter: blur(15px);
+    animation: brillo 3s infinite;
+}
+
+@keyframes brillo {
+    0% {transform: scale(1); opacity: 0.6;}
+    50% {transform: scale(1.2); opacity: 1;}
+    100% {transform: scale(1); opacity: 0.6;}
+}
+
+.foto-pequena {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 50%;
+    border: 4px solid white;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+}
+
+/* hover */
+.marco-foto a:hover img {
+    transform: scale(1.08);
+    transition: 0.3s;
+    box-shadow: 0 0 25px rgba(255,105,180,0.8);
+}
+
+/* --- FRASES --- */
+.contenedor-movimiento {
+    overflow: hidden;
+    background: rgba(255,20,147,0.2);
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.frases-movimiento {
+    display: flex;
+    gap: 40px;
+    animation: mover 40s linear infinite;
+}
+
+.frases-movimiento p {
+    white-space: pre-line;
+    min-width: 300px;
+    font-style: italic;
+}
+
+.frases-movimiento p::after {
+    content: " ❤️";
+}
+
+@keyframes mover {
+    0% {transform: translateX(100%);}
+    100% {transform: translateX(-100%);}
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width:600px){
+    h1 {font-size: 2em;}
+    .foto-pequena {width:120px;height:120px;}
+}
+</style>
+</head>
+
+<body>
+
+<div class="fondo-imagen">
+<div class="contenedor">
+
+<h1>Como tu ninguna porque eres hermosa</h1>
+<h2 class="subtitulo">Más de lo que las palabras pueden decir</h2>
+
+<div class="marco-foto">
+    <a href="https://youtu.be/X5mWSZSAIOA?si=RxNHTH1MGI5iBzdl" target="_blank">
+        <img src="dey.jpeg" class="foto-pequena">
+    </a>
+</div>
+
+<div class="contenedor-movimiento">
+<div class="frases-movimiento">
+
+<p>Como tu ninguna,
+porque eres hermosa,
+es que hasta tu mirada,
+es demasiado preciosa.</p>
+
+<p>Eres lo que jamás he mirado,
+así brillante y delicada,
+para mí eres única en el mundo,
+así siempre serás recordada.</p>
+
+<p>Como tú ninguna,
+perteneciente al INPEC,
+contigo es tener una fortuna,
+con el uniforme qué bella te ves.</p>
+
+<p>Eres esa radiante dama,
+cualquier hombre te quiere tener,
+imposible olvidar tu aroma,
+me imagino juntos poder crecer.</p>
+
+<p>Como tú ninguna,
+especializada en guía canino,
+en tu trabajo realizas tu rutina,
+así como eres te recuerdo y te imagino.</p>
+
+<p>No existen las palabras,
+para decirte todo lo que eres,
+pero en mí siempre serás,
+la mujer de mis quereres.</p>
+
+<p>Como tú ninguna,
+eso que quede claro,
+te protegeré como una joya fina,
+aunque te parezca raro.</p>
+
+<p>Con este verso me despido,
+te deseo siempre lo mejor,
+para mí siempre será un honor,
+escribirte desde lo más profundo.</p>
+
+</div>
+</div>
+
+</div>
+</div>
+
+</body>
+</html>
